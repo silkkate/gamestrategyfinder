@@ -1,20 +1,15 @@
 const gameTitleInput = document.getElementById("gameTitle");
 const strategyButton = document.getElementById("strategyButton");
-const apiKey = process.env.GAME_API_KEY;
-const openAiUrl = "https://api.openai.com/v1/engines/text-davinci-003/completions";
 
 function getGameStrategy() {
     const gameTitle = gameTitleInput.value;
-    const aiPrompt = `Give me the best strategy to beat ${gameTitle}.`;
-    fetch(openAiUrl, {
+    fetch('/api/fetchStrategy', {
         method: "POST",
         headers: {
-            'Authorization': `Bearer ${apiKey}`,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            prompt: aiPrompt,
-            max_tokens: 1000,
+            gameTitle: gameTitle
         }),
     })
     .then(response => response.json())
