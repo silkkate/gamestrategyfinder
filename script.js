@@ -2,6 +2,7 @@ const gameTitleInput = document.getElementById("gameTitle");
 const strategyButton = document.getElementById("strategyButton");
 const apiKey = process.env.NEXT_PUBLIC_GAME_API_KEY;
 const openAiUrl = "https://api.openai.com/v1/engines/text-davinci-003/completions";
+console.log("hello");
 
 function getGameStrategy() {
     const gameTitle = gameTitleInput.value;
