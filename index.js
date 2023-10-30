@@ -1,6 +1,6 @@
 const gameTitleInput = document.getElementById("gameTitle");
 const strategyButton = document.getElementById("strategyButton");
-const apiKey = "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";
+const apiKey = GAME_API_KEY;
 const openAiUrl = "https://api.openai.com/v1/engines/text-davinci-003/completions";
 
 function getGameStrategy() {
