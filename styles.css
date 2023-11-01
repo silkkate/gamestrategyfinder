@@ -24,6 +24,7 @@ h1,h2,p {
 }
 
 .gameBoy {
+  display: block;
   width: 250px;
   height: 400px;
   margin-left: auto;
