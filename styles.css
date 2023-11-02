@@ -24,10 +24,21 @@ h1,h2,p {
 }
 
 .gameBoy {
+  padding-top: 1px;
   display: block;
   width: 250px;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(255, 0, 0);
+}
+
+.screen {
+  display: block;
+  width: 200px;
+  height: 150px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: darkgray;
 }
