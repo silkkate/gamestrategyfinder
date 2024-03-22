@@ -10,14 +10,13 @@ function getGameStrategy() {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            gameTitle: gameTitleInput.value,
+            gameTitle: gameTitle,
         }),
     })    
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        console.log(data.choices[0].text.trim());
-        let formattedText = data.choices[0].text.trim().replace(/\n/g, '<br>');
+        let formattedText = data.strategy.replace(/\n/g, '<br>');
         document.getElementById('gameStrategy').innerHTML = formattedText;
     })
 }
