@@ -1,7 +1,7 @@
 const gameTitleInput = document.getElementById("gameTitle");
 const strategyButton = document.getElementById("strategyButton");
-const apiKey = APIKEY;
-const openAiUrl = "https://api.openai.com/v1/engines/text-davinci-003/completions";
+const apiKey = 'apiKey';
+const openAiUrl = "https://api.openai.com/v1/completions";
 
 function getGameStrategy() {
     const gameTitle = gameTitleInput.value;
@@ -13,6 +13,7 @@ function getGameStrategy() {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+            model: "gpt-3.5-turbo-instruct",
             prompt: aiPrompt,
             max_tokens: 1000,
         }),

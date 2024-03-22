@@ -15,7 +15,7 @@
   color: #0f380f;
 }
 
-.title {
+.title, #strategyButton {
   font-family: "early-gameboy", serif;
 }
 
@@ -28,6 +28,29 @@
 .input {
   margin-right: 5px;
   font-family: "retro-gaming", sans-serif;
+  color: #306230;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: #306230;
+  background-color: #CADA9F;
 }
 
 
+#gameStrategy {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  color: #0f380f;
+  font-family: "retro-gaming", sans-serif;
+
+} 
+
+#strategyButton {
+  padding: 10px;
+  background-color: #8bac0f;
+  border-width: 2px;
+  border-color: #306230;
+  border-radius: 5px;
+  color: #306230;
+}
