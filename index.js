@@ -7,12 +7,12 @@ function getGameStrategy() {
     fetch("/api/getgamestrat", {
         method: "POST",
         headers: {
-            'Content-Type': 'application.json',
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            gameTitle: gameTitle,
+            gameTitle: gameTitleInput.value,
         }),
-    })
+    })    
     .then(response => response.json())
     .then(data => {
         console.log(data.choices[0].text.trim());
