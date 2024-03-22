@@ -26,8 +26,4 @@ export default async (req, res) => {
         console.error(error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
-
-    const data = await response.json();
-    console.log("OpenAI response:", data);
-
 };
