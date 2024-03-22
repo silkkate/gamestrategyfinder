@@ -1,21 +1,16 @@
 const gameTitleInput = document.getElementById("gameTitle");
 const strategyButton = document.getElementById("strategyButton");
-const apiKey = 'apiKey';
 const openAiUrl = "https://api.openai.com/v1/completions";
 
 function getGameStrategy() {
     const gameTitle = gameTitleInput.value;
-    const aiPrompt = `Give me the best strategy to beat ${gameTitle}.`;
-    fetch(openAiUrl, {
+    fetch("api/getgamestrat.js", {
         method: "POST",
         headers: {
-            'Authorization': `Bearer ${apiKey}`,
-            'Content-Type': 'application/json',
+            'Content-Type': 'application.json',
         },
         body: JSON.stringify({
-            model: "gpt-3.5-turbo-instruct",
-            prompt: aiPrompt,
-            max_tokens: 1000,
+            gameTitle: gameTitle,
         }),
     })
     .then(response => response.json())
