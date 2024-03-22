@@ -1,41 +1,33 @@
-h1 {
-  margin-bottom: 10px;
-  margin-top: 250px;
+* {
+  box-sizing: border-box;
+  background-color: #CADA9F;
 }
 
-h1,h2,p {
+@font-face {
+  font-family: "early-gameboy";
+  src: url("early-gameboy.ttf") format("truetype");
+  font-family: "retro-gaming";
+  src: url("retro-gaming.ttf") format("truetype");
+}
+
+.title, .input {
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: #0f380f;
 }
 
-.input {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-}
-
-.gameBoy {
-  width: 250px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #eb0d32
+.title {
+  font-family: "early-gameboy", serif;
 }
 
 .screen {
-  width: 200px;
-  height: 190px;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #80858a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.input {
+  margin-right: 5px;
+  font-family: "retro-gaming", sans-serif;
+}
+
+
