@@ -15,6 +15,7 @@ function getGameStrategy() {
     })    
     .then(response => response.json())
     .then(data => {
+        console.log(data);
         console.log(data.choices[0].text.trim());
         let formattedText = data.choices[0].text.trim().replace(/\n/g, '<br>');
         document.getElementById('gameStrategy').innerHTML = formattedText;
