@@ -4,7 +4,7 @@ const openAiUrl = "https://api.openai.com/v1/completions";
 
 function getGameStrategy() {
     const gameTitle = gameTitleInput.value;
-    fetch("/api/getgamestrat.js", {
+    fetch("/api/getgamestrat", {
         method: "POST",
         headers: {
             'Content-Type': 'application.json',
