@@ -50,7 +50,7 @@
 } 
 
 #strategyButton {
-  padding: 20px;
+  padding: 10px;
   background-color: #8bac0f;
   border-width: 2px;
   border-color: #306230;
@@ -61,6 +61,6 @@
 #loadingIndicator {
   font-family: "early-gameboy", serif;
   color:#306230;
-  margin-top: 10px; 
+  margin-top: 30px; 
   text-align: center;
 }
