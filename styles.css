@@ -56,7 +56,6 @@
 }
 
 #loadingIndicator {
-  display: block;
   font-family: "early-gameboy", serif;
   color:#306230;
   margin-top: 10px; 
