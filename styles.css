@@ -67,5 +67,6 @@
 
 .gameboyBorder {
   border-width: 50px;
+  border-style: solid;
   border-color: #545454;
 }
