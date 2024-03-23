@@ -1,8 +1,12 @@
 const gameTitleInput = document.getElementById("gameTitle");
 const strategyButton = document.getElementById("strategyButton");
+const loadingIndicator = document.getElementById("loadingIndicator");
 const openAiUrl = "https://api.openai.com/v1/completions";
 
 function getGameStrategy() {
+    strategyButton.disabled = true;
+    loadingIndicator.style.display = 'block';
+
     const gameTitle = gameTitleInput.value;
     fetch("/api/getgamestrat", {
         method: "POST",
@@ -19,6 +23,13 @@ function getGameStrategy() {
         let formattedText = data.strategy.replace(/\n/g, '<br>');
         document.getElementById('gameStrategy').innerHTML = formattedText;
     })
+    .catch(error => {
+        console.error('Fetch error:', error);
+    })
+    .finally(() => {
+        strategyButton.disabled = false;
+        loadingIndicator.style.display = 'none';
+    });
 }
 
     strategyButton.addEventListener('click', getGameStrategy);
