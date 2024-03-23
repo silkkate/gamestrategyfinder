@@ -64,3 +64,8 @@
   margin-top: 30px; 
   text-align: center;
 }
+
+.gameboyBorder {
+  border-width: 50px;
+  border-color: #545454;
+}
