@@ -58,5 +58,7 @@
 #loadingIndicator {
   display: flex;
   font-family: "early-gameboy", serif;
-  color:#0f380f
+  color:#0f380f;
+  margin-top: 10px; 
+  text-align: center;
 }
