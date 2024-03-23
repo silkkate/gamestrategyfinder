@@ -6,6 +6,9 @@
 @font-face {
   font-family: "early-gameboy";
   src: url("early-gameboy.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "retro-gaming";
   src: url("retro-gaming.ttf") format("truetype");
 }
